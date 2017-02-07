@@ -103,6 +103,12 @@
     <ClCompile Include="..\Code\JointDemo.cpp">
       <Filter>Demos</Filter>
     </ClCompile>
+    <ClCompile Include="..\Code\AccumulatedImpulse.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\AccumulatedImpulseDemo.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Code\glad\glad.h">
@@ -226,6 +232,12 @@
       <Filter>Physics</Filter>
     </ClInclude>
     <ClInclude Include="..\Code\JointDemo.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Code\AccumulatedImpulse.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Code\AccumulatedImpulseDemo.h">
       <Filter>Demos</Filter>
     </ClInclude>
   </ItemGroup>

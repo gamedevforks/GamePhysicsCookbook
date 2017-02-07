@@ -10,6 +10,7 @@
 #include "SimpleSprings.h"
 #include "CH16Demo.h"
 #include "JointDemo.h"
+#include "AccumulatedImpulseDemo.h"
 
 #include <cstdlib>
 
@@ -24,7 +25,7 @@ void DemoWindow::OnInitialize() {
 	m_pDemo = 0;
 	imgui_init = true;
 
-	select_all = false;
+	select_all = true;
 }
 
 DemoWindow::~DemoWindow() {
@@ -74,10 +75,10 @@ void DemoWindow::OnUpdate(float deltaTime) {
 	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
 	if (select_all) {
-		const char* listbox_items[] = { "Raycast Demo", "Chapter 14", "Collision Features", "Linear Impulse", "Conservation Of Momentum", "Chapter 15", "Simple Springs", "Chapter 16", "Joint Demo" };
+		const char* listbox_items[] = { "Raycast Demo", "Chapter 14", "Collision Features", "Linear Impulse", "Conservation Of Momentum", "Chapter 15", "Simple Springs", "Chapter 16", "Joint Demo", "Accumulated Impulse" };
 		int lastSelected = m_selectedDemo;
 		ImGui::PushItemWidth(350);
-		ImGui::ListBox("", &m_selectedDemo, listbox_items, 9, 5);
+		ImGui::ListBox("", &m_selectedDemo, listbox_items, 10, 5);
 
 		if (m_selectedDemo != lastSelected) {
 			StopDemo();
@@ -92,6 +93,7 @@ void DemoWindow::OnUpdate(float deltaTime) {
 				case 6: m_pDemo = new SimpleSprings(); break;
 				case 7: m_pDemo = new CH16Demo(); break;
 				case 8: m_pDemo = new JointDemo(); break;
+				case 9: m_pDemo = new AccumulatedImpulseDemo(); break;
 			}
 			
 			m_pDemo->Initialize(GetWidth(), GetHeight());

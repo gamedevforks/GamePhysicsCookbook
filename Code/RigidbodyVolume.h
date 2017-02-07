@@ -2,11 +2,13 @@
 #define _H_MASS_RIGIDBODY_
 
 #include "Rigidbody.h"
+#include <string>
 
 #define GRAVITY_CONST vec3(0.0f, -9.82f, 0.0f)
 
 class RigidbodyVolume : public Rigidbody {
 public:
+	std::string name;
 	vec3 position;
 	vec3 velocity;
 

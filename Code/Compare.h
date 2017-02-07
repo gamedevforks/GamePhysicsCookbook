@@ -89,4 +89,7 @@ inline bool AlmostEqualRelativeAndAbs(float A, float B, float maxDiff, float max
 #define CMP(x, y) \
 	AlmostEqualRelativeAndAbs(x, y, 0.005f)
 
+#define ZERO(x) \
+	(fabsf(0.0f - (x)) < 0.00001f)
+
 #endif

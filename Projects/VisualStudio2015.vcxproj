@@ -145,6 +145,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Code\AccumulatedImpulse.h" />
+    <ClInclude Include="..\Code\AccumulatedImpulseDemo.h" />
     <ClInclude Include="..\Code\CH15Demo.h" />
     <ClInclude Include="..\Code\Camera.h" />
     <ClInclude Include="..\Code\CH14Demo.h" />
@@ -188,6 +190,8 @@
     <ClInclude Include="..\Code\vectors.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Code\AccumulatedImpulse.cpp" />
+    <ClCompile Include="..\Code\AccumulatedImpulseDemo.cpp" />
     <ClCompile Include="..\Code\CH15Demo.cpp" />
     <ClCompile Include="..\Code\Camera.cpp" />
     <ClCompile Include="..\Code\CH14Demo.cpp" />
